@@ -57,7 +57,11 @@ namespace QuranApp
                         GestureRecognizers = {
                             new TapGestureRecognizer{
                             Command = new Command((object obj) => {Navigation.PushAsync(new SurahPage(surah.number, surah.name,(surah.revelationType == "mekah"?"Makkiyah":"Madaniyah"), surah.ayatCount )); })
-                            }             
+                            },
+                            new ClickGestureRecognizer
+                            {
+                                Command = new Command((object obj) => {Navigation.PushAsync(new SurahPage(surah.number, surah.name,(surah.revelationType == "mekah"?"Makkiyah":"Madaniyah"), surah.ayatCount )); })
+                            }
                         },
                         Content = new Frame { 
                             Content= grid,

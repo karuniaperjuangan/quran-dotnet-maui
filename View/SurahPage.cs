@@ -1,5 +1,4 @@
-﻿using Android.Text;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,7 +32,7 @@ namespace QuranApp
                                 CornerRadius = 12,
                                 Content = new Label{Text = ayat.arabic, FontSize = 32, FontFamily = "Arabic", HorizontalTextAlignment=TextAlignment.End }
                             },
-                            new Label{Text = $"{ayat.number}. {Html.FromHtml(ayat.transliteration)}", FontSize = 18},
+                            new Label{Text = $"{ayat.number}. {ayat.transliteration}", FontSize = 18},
                             new Label{Text = $"{ayat.number}. {ayat.meaning}", FontSize = 18},
                         }
                     }
